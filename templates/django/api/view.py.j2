@@ -1,0 +1,9 @@
+def {{ function_name }}(request):
+    if request.method == "{{ method|upper }}":
+        return JsonResponse({
+            "message": "{{ message }}"
+        }, status=200)
+
+    return JsonResponse({
+        "error": "invalid method"
+    }, status=405)
