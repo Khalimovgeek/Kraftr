@@ -1,0 +1,11 @@
+def {{ function_name }}(request):
+
+    {% if auth == "jwt" %}
+    {% include "django/components/auth/jwt.py.j2" %}
+    {% endif %}
+
+    {% if method == "POST" %}
+    {% include "django/components/validation/basic.py.j2" %}
+    {% endif %}
+
+    {% include "django/components/response/success.py.j2" %}
