@@ -12,3 +12,33 @@ def get_user(request):
     return JsonResponse({
         "error": "invalid method"
     }, status=405)
+
+def post_user(request):
+    if request.method == "POST":
+        return JsonResponse({
+            "message": "success"
+        }, status=200)
+
+    return JsonResponse({
+        "error": "invalid method"
+    }, status=405)
+
+def user(request):
+    if request.method == "GET":
+        return JsonResponse({
+            "message": "success"
+        }, status=200)
+
+    return JsonResponse({
+        "error": "invalid method"
+    }, status=405)
+
+def user1(request):
+    if request.method == "GET":
+        return JsonResponse({
+            "message": "success"
+        }, status=200)
+
+    return JsonResponse({
+        "error": "invalid method"
+    }, status=405)
