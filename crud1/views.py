@@ -42,3 +42,14 @@ def user1(request):
     return JsonResponse({
         "error": "invalid method"
     }, status=405)
+
+
+def api_final_test(request):
+    if request.method == "GET":
+        return JsonResponse({
+            "message": "success"
+        }, status=200)
+
+    return JsonResponse({
+        "error": "invalid method"
+    }, status=405)

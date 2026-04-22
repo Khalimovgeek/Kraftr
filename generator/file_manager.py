@@ -11,3 +11,7 @@ def read_file(path):
 def append_to_file(path, content):
     with open(path, "a") as f:
         f.write("\n\n" + content)
+        
+def write_file(path, content):
+    with open(path, "w") as f:
+        f.write(content)
